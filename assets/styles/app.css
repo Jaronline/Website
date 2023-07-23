@@ -1,0 +1,10 @@
+@import '~@fontsource/source-sans-pro';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}

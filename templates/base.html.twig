@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Jaronline{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="min-h-[100svh] flex flex-col bg-sky-900 text-neutral-100">
+        <header class="px-5 py-4 shadow-lg">
+            <a href="{{ path('app_home') }}">
+                <img class="w-32" src="{{ asset('logo.png') }}" alt="Jaronline Logo">
+            </a>
+        </header>
+        <main class="px-5 py-4 flex-1">
+            {% block body %}{% endblock %}
+        </main>
+        <footer class="p-5 abg-cyan-950 text-gray-200 bg-sky-950">
+            <p class="mb-3">&copy; 2023 Jaron Zijlstra | Jaronline</p>
+            <div class="flex gap-2">
+                <a
+                    href="mailto:info@jaronline.dev"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-envelope fa-2x"></i>
+                </a>
+                <a
+                    href="https://links.jaronline.dev/linkedin"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+                <a
+                    href="https://links.jaronline.dev/github"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
